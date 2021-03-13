@@ -1,0 +1,176 @@
+div#Simulation_body {
+    margin-top: 18px;
+    margin-left: 18px;
+}
+div#Simulation_body .line {
+    width: 100%;  
+    display: flex;
+    margin : auto;
+    justify-items: center;
+    flex-direction: row;
+}
+
+body{
+    background: #fafafa;
+}
+
+div#Simulation_body .line .button1{
+    margin: 10px;
+    padding: 15px 25px;
+    font-size: 24px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+    background: #2CC990;
+    height: 270px;
+    width: 400px;
+    font-size: 28px;
+    color : #ffffff;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url('../../img/inverter.png');
+    background-size: 42%;
+    background-position: left;
+    background-repeat: no-repeat;
+    text-transform: uppercase;
+    text-align: right;
+}
+
+div#Simulation_body .line .button1:active{
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+div#Simulation_body .line .button2{
+    margin: 10px;
+    padding: 15px 25px;
+    font-size: 24px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+    background: #EEE657;
+    height: 270px;
+    width: 400px;
+    font-size: 26px;
+    color : #ffffff;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url('../../img/maintenance.png');
+    background-size: 42%;
+    background-position: left;
+    background-repeat: no-repeat;
+    text-transform: uppercase;
+    text-align: right;
+}
+
+div#Simulation_body .line .button2:active{
+    background-color: rgb(155, 146, 28);
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+div#Simulation_body .line .button3{
+    margin: 10px;
+    padding: 15px 25px;
+    font-size: 24px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+    background: #FCB941;
+    height: 270px;
+    width: 400px;
+    font-size: 26px;
+    color : #ffffff;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url('../../img/stop.png');
+    background-size: 42%;
+    background-position: left;
+    background-repeat: no-repeat;
+    text-transform: uppercase;
+    text-align: right;
+}
+
+div#Simulation_body .line .button3:active{
+    background-color: rgb(165, 119, 34);
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+div#Simulation_body .line .button4{
+    margin: 10px;
+    padding: 15px 25px;
+    font-size: 24px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+    background: #FC6042;
+    height: 270px;
+    width: 400px;
+    font-size: 26px;
+    color : #ffffff;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url('../../img/temp.png');
+    background-size: 42%;
+    background-position: left;
+    background-repeat: no-repeat;
+    text-transform: uppercase;
+    text-align: right;
+}
+
+div#Simulation_body .line .button4:active{
+    background-color: rgb(160, 54, 33);
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+div#Simulation_body .line .button5{
+    margin: 10px;
+    padding: 15px 25px;
+    font-size: 24px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+    background: rgb(201, 201, 201);
+    margin-bottom: 30px;
+    height: 120px;
+    width: 150px;
+    font-size: 26px;
+    color : #ffffff;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url('../../img/trash.png');
+    background-size: 42%;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-transform: uppercase;
+    text-align: right;
+}
+
+div#Simulation_body .line .button5:active{
+    background-color: rgb(107, 107, 107);
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}

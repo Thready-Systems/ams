@@ -1,9 +1,8 @@
 import axios from 'axios';
-import config from '../config/server_config';
 import { getToken } from './auth';
 
 const amsApi = axios.create({
-    baseURL : `${config.apiBackend}`
+    baseURL : process.env.REACT_APP_BACKEND,
 });
 
 amsApi.interceptors.request.use(async config => {

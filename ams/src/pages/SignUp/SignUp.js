@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
+import {Paper,TextField,Button,Select,MenuItem,InputLabel,FormControl} from '@material-ui/core';
+import DashboardLayout from '../../components/DashboardLayout';
 import amsApi from '../../services/amsApi';
 import 'react-phone-input-2/dist/style.css'
 import './SignUp.css';
 
-import ReactPhoneInput from 'react-phone-input-2'
-
 class SignUp extends Component{
     state = {
         name : '',
+        surname : '',
         password : '',
         username : '',
         phone : '',
@@ -21,6 +22,7 @@ class SignUp extends Component{
             event.preventDefault();            
             await amsApi.post('/api/user',{
                 'name' : this.state.name,
+                'surname' : this.state.surname,
                 'username' : this.state.username,
                 'password' : this.state.password,
                 'phone' : this.state.phone,
@@ -30,7 +32,6 @@ class SignUp extends Component{
                 'perfil' : this.state.perfil,
             });
             this.props.history.push('/');
-
     }
 
     handleOnChange = event =>{
@@ -39,69 +40,110 @@ class SignUp extends Component{
 
     render(){
         return(
-            <form id='SignUpForm' onSubmit={this.handleSubmit}>
-                <label>User creation</label>
-                <input 
-                    type='text'
-                    placeholder='Your full name'
-                    value={this.state.name}
-                    name='name'
-                    onChange={this.handleOnChange}
-                />
-                <input 
-                    type='text'
-                    placeholder='email ex: user@thready.com.br'
-                    value={this.state.username}
-                    name='username'
-                    onChange={this.handleOnChange}
-                />
-                <input 
-                    type='password'
-                    placeholder='Password'
-                    value={this.state.password}
-                    name='password'
-                    onChange={this.handleOnChange}
-                />
+            <div>
+                <DashboardLayout/>
+                <div className='user-form'>
+                    <Paper elevation={2} className='main-paper'>
+                        <form Validate autoComplete="off" onSubmit={this.handleSubmit}>
+                            <TextField
+                                className='elements'
+                                label='Nome'
+                                size='small'
+                                value={this.state.name}
+                                name='name'
+                                onChange={this.handleOnChange}
+                            />
+                            <TextField
+                                className='elements'
+                                label='Sobrenome'
+                                size='small'
+                                value={this.state.surname}
+                                name='surname'
+                                onChange={this.handleOnChange}
+                            />
+                            <TextField
+                                className='elements'
+                                label='Email'
+                                size='small'
+                                value={this.state.username}
+                                name='username'
+                                onChange={this.handleOnChange}
+                            />
+                            <TextField
+                                className='elements'
+                                type='password'
+                                label='Senha'
+                                size='small'
+                                value={this.state.password}
+                                name='password'
+                                onChange={this.handleOnChange}
+                            />
+                            <TextField
+                                className='elements' 
+                                label='Empresa'
+                                placeholder='Company name'
+                                value={this.state.company}
+                                name='company'
+                                onChange={this.handleOnChange}
+                                />
+                            <TextField
+                                className='elements'
+                                label='Departamento'
+                                placeholder='Department'
+                                value={this.state.department}
+                                name='department'
+                                onChange={this.handleOnChange}
+                            />
+                           <FormControl className='elements-formControl'>
+                           <InputLabel id='input-cargo'>Cargo</InputLabel>
+                                <Select 
+                                    labelId='input-cargo'
+                                    className='elements'
+                                    label='Cargo'
+                                    name='role' 
+                                    value={this.state.role} 
+                                    onChange={this.handleOnChange}>
+                                        <MenuItem value=''>...</MenuItem>
+                                        <MenuItem value='Developer'>Developer</MenuItem>
+                                        <MenuItem value='Manager'>Manager</MenuItem>
+                                        <MenuItem value='IT infrastructure'>IT infrastructure</MenuItem>
+                                        <MenuItem value='Salles'>Salles</MenuItem>
+                                </Select>
+                           </FormControl>
 
-                <ReactPhoneInput                    
-                    defaultCountry="us"
-                    value={this.state.phone}
-                    onChange={phone => this.setState({ phone })}
-                />
-
-                <input
-                    className='companyInput' 
-                    type='text'
-                    placeholder='Company name'
-                    value={this.state.company}
-                    name='company'
-                    onChange={this.handleOnChange}
-                />
-                <input 
-                    type='text'
-                    placeholder='Department'
-                    value={this.state.department}
-                    name='department'
-                    onChange={this.handleOnChange}
-                />
-                <select name='role' value={this.state.role} onChange={this.handleOnChange}>
-                    <option  value=''>...</option>
-                    <option  value='Developer'>Developer</option>
-                    <option value='Manager'>Manager</option>
-                    <option value='IT infrastructure'>IT infrastructure</option>
-                    <option value='Salles'>Salles</option>
-                </select>
-
-                <select name='perfil' value={this.state.perfil} onChange={this.handleOnChange}>
-                    <option  value=''>...</option>
-                    <option value='Admin'>Admin</option>
-                    <option value='User'>User</option>
-                </select>
-
-                <button type='submit'>Save</button>
-            </form>
+                           <FormControl className='elements-formControl'>
+                            <InputLabel id='input-perfil'>Perfil</InputLabel>
+                                <Select
+                                    labelId='input-perfil'
+                                    className='elements'
+                                    label='Perfil'
+                                    name='perfil' 
+                                    value={this.state.perfil} 
+                                    onChange={this.handleOnChange}>
+                                        <MenuItem value=''>...</MenuItem>
+                                        <MenuItem value='Admin'>Admin</MenuItem>
+                                        <MenuItem value='User'>User</MenuItem>
+                                </Select>
+                            </FormControl>
+                            {/* <ReactPhoneInput
+                                className='elements'                    
+                                defaultCountry="br"
+                                value={this.state.phone}
+                                onChange={phone => this.setState({ phone })}
+                            /> */}
+                            <div className='action-footer'>
+                                <Button type='submit' className='elements' variant="contained" color="primary">Salvar</Button>
+                            </div>
+                        </form>    
+                    </Paper>
+                </div>
+            </div>
         )
     }
 }
 
 export default SignUp;
+
+
+
+

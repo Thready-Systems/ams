@@ -1,0 +1,16 @@
+.main-container {
+    height: 460px;
+    width: 100%;
+    margin-top : 10px;  
+}
+
+.main-container .map{
+    height: 500px;
+    width: 100%;
+    margin-top: 15px;
+}
+
+.main-container .popupIcon{
+    width: 80px;
+    height: 80px;
+}

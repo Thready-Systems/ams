@@ -6,7 +6,7 @@ div#loginArea .login{
     width: 100%;
     max-width: 30%;
     margin : 20px auto;
-    padding: 20px 30px 60px 30px;
+    padding: 20px 30px 20px 30px;
     border : 1px solid #dadada;
     border-radius: 5px;
     background: #FFFFFF;
@@ -25,6 +25,12 @@ div#loginArea form header {
     justify-content: space-between;
     align-items: center;   
     margin-bottom: 30px;
+}
+div#loginArea form footer {
+    display: flex;
+    margin-top: 40px;
+    justify-content: center;
+    align-items: center;
 }
 
 div#loginArea .login input{

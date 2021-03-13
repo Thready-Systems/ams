@@ -1,0 +1,7 @@
+.dashboardMap{
+    display: flex;
+    margin-left: 80px;
+    margin-top: -40px;
+    width: 93%;
+    height: 500px;
+}

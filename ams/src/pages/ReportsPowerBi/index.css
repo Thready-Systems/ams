@@ -1,0 +1,28 @@
+#listReport .lineReport1{
+    width: 100%;
+    max-width: 480px;
+    display: flex;
+    justify-items: center;   
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+#listReport .lineReport2{
+    display: flex;
+    width: 100%;
+    max-width: 87%; 
+    margin : 10px 0px 0px -65px;
+    justify-content: space-between;
+    justify-items: center;
+    flex-direction: row;
+}
+
+#listReport .lineReport3{
+    width: 100%;
+    max-width: 480px;
+    display: flex;
+    margin-left: 10%;
+    justify-content: space-between;
+    justify-items: center;
+    flex-direction: row;
+}
